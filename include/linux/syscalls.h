@@ -84,6 +84,7 @@ enum landlock_rule_type;
 #include <linux/quota.h>
 #include <linux/key.h>
 #include <linux/personality.h>
+#include <linux/statzfs.h>
 #include <trace/syscall.h>
 
 #ifdef CONFIG_ARCH_HAS_SYSCALL_WRAPPER
@@ -1381,4 +1382,8 @@ int __sys_getsockopt(int fd, int level, int optname, char __user *optval,
 		int __user *optlen);
 int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 		int optlen);
+
+// TODO: Where are other sys call linkage?
+asmlinkage int sys_statzfs(const struct kstatzfs __user *buf);
+
 #endif

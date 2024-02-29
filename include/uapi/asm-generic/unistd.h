@@ -929,4 +929,9 @@ __SYSCALL(__NR_process_mrelease, sys_process_mrelease)
 #define __NR_stat64 __NR3264_stat
 #define __NR_lstat64 __NR3264_lstat
 #endif
+
+// MLEC
+#define __NR_statzfs 548 \
+	__SYSCALL(__NR_statzfs, sys_statzfs)
+
 #endif

@@ -1383,7 +1383,6 @@ int __sys_getsockopt(int fd, int level, int optname, char __user *optval,
 int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 		int optlen);
 
-// TODO: Where are other sys call linkage?
-asmlinkage int sys_statzfs(const struct kstatzfs __user *buf);
+asmlinkage int sys_statzfs(void);
 
 #endif
